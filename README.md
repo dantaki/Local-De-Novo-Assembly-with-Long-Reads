@@ -3,7 +3,7 @@ A quick tutorial on local de novo assembly of long reads for SV validation
 
 ------
 
-# Tutorial
+## Tutorial
 
 Perform local de novo assembly for a heterozygous 6kb inversion reported by the 1000 Genomes Project.
 
@@ -21,7 +21,7 @@ Inversion call
 
 ----------------------------
 
-# Methodology
+## Methodology
 
 1. Convert BAM -> FASTQ 
 2. Map with Minimap2/NGMLR
@@ -31,7 +31,7 @@ Inversion call
 
 ----------------------------
 
-# Requires:
+## Requires 
 
 * python 2.7 (for Flye)
 * samtools
@@ -41,7 +41,7 @@ Inversion call
 
 ---------------------------
 
-# Commands
+## Commands
 ```
 # 1 bam2fq
 samtools bam2fq 1kgp.bam  >raw.fq
@@ -100,4 +100,3 @@ Useful Links:
 Also you can call SVs with LAST alignments using NanoSV, however the last time I checked NanoSV's source code it was written in Perl and could only call INS, DEL, and DUP
 NanoSV is now written in python and maybe can call INV now. 
 [NanoSV](https://github.com/mroosmalen/nanosv)
-
