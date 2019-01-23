@@ -107,9 +107,9 @@ flye  --pacbio-raw minimap2.sr.fq -g 15k -o minimap2_sr_flye --meta
 
 ### 5 Align with LAST
 ```
-# make a reference, just from chromosome 11
+# make a reference, just from chromosome 10
 
-samtools faidx human_g1k_v37.fasta 11 >grch37.chr10.fa
+samtools faidx human_g1k_v37.fasta 10 >grch37.chr10.fa
 java -jar picard.jar CreateSequenceDictionary REFERENCE=grch37.chr10.fa OUTPUT=grch37.chr10.dict
 lastdb -uNEAR -R01 grch37.chr10.last grch37.chr10.fa
 
