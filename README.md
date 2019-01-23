@@ -1,7 +1,5 @@
 # Local De Novo Assembly with Long Reads
 A quick tutorial on local de novo assembly of long reads for SV validation
-
-------
 ## Tutorial
 
 Perform local de novo assembly for a heterozygous 6kb inversion reported by the 1000 Genomes Project.
@@ -70,13 +68,13 @@ The assembled contigs are in these SAM files
 ---------------------------
 ## Commands
 
-### 1 bam2fq
+### 1 Bam2Fq
 
 ```
 samtools bam2fq 1kgp.bam  >raw.fq
 ```
 
-### 2 map with minimap2 or ngmlr
+### 2 Map with minimap2 or ngmlr
 
 ```
 minimap2 -ax map-pb human_g1k_v37.fasta raw.fq >minimap2.sam
@@ -84,7 +82,7 @@ minimap2 -ax map-pb human_g1k_v37.fasta raw.fq >minimap2.sam
 ngmlr -r human_g1k_v37.fasta -q raw.fq -x pacbio >ngmlr.sam
 ```
 
-### 3 extract split-reads 
+### 3 Extract Split-Reads 
 
 ```
 # get the header
